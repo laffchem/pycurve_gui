@@ -1,0 +1,91 @@
+body {
+    font-family: 'Ubuntu', 'sans-serif';
+    background-color: #E7E7DE;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #E7E7DE;
+}
+
+h3 {
+    margin-top: 2%;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+h5  {
+    font-weight: bold;
+}
+
+
+.topbox {
+    padding: 5% 0 5%;
+    background-color: #008891;
+    color: #0D7377;
+}
+
+/* modal  */
+.modal-header {
+    background-color: #008891;
+    color: #E7E7DE;
+}
+
+
+.modal-body {
+    background-color: #E7E7DE;
+}
+
+.modal-footer {
+    background-color:#008891;
+}
+
+.btn-secondary {
+    background-color:#FFD124;
+    color: #000;
+}
+
+
+/* form */
+
+.col-lg-6 {
+    padding: 0 7.5% 0 7.5%;
+}
+
+.csv-upload {
+    padding-top: 50px;
+}
+
+.btn-submit {
+    background-color: #008891;
+    color: #E7E7DE;
+    margin-top: 1%;
+    margin: auto;
+}
+
+.btn-reset {
+    background-color: #FFD124;
+    margin-top: 1%;
+    margin: auto;
+}
+
+.instructions {
+    color: #fff;
+    margin-top: 1%;
+    margin-left: 10%;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-top: 2%;
+}
+
+.label {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}

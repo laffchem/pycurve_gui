@@ -1,0 +1,89 @@
+{% extends 'layout.html' %} {% block title %}Pycurve{% endblock %}{% block content %}
+<div class="modal fade" id="instructionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="instructionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="instructionModalLabel">Instructions</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Choose the csv file you wish to use from your computer.</p>
+                <p>Ensure you know the column name for the grades you want curved and type it in exactly as it is in the file.</p>
+                <ul>
+                <li>Option 1 -> The square root curve will take the square root of each score and\
+                multiply it by 10.</li>
+                <li>Option 2 -> The max score curve will see which grade range the top score\
+                falls in between and subtract the max score from the upper number.
+                This modifier will be added to all grades.</li>
+                <li>Option 3 -> This will just add 10 points to all the scores</li>
+                <p>
+
+            </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<form action="" class="row justify-content-center hours-form" method="POST" enctype = "multipart/form-data">
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label class="label" for="csv-form">
+                Select the csv file.
+            </label>
+            <input class="form-control" type="file" id="formFile" name="file">
+        </div>
+        <div class="form-group">
+            <label class="label" for="curved-col">
+                Grades Column
+            </label>
+            <input type="text" class="form-control" id="curved-col" name="curved-col"
+                placeholder="Enter the column name you wish to curve.">
+        </div>
+        <div class="form-group">
+            <label class="label" for="curved-file">
+                Curved File Name
+            </label>
+            <input type="text" class="form-control" id="curved-file" name="curved-file"
+                placeholder="Enter the filename you wish to download.">
+        </div>
+
+        <div class="form-group">
+            <label class="label" for="curve-apply">
+                Curve
+            </label>
+            <select class="form-select" id="curve-apply" name="curve-apply" aria-label=".form-select-sm example">
+                <option selected>Choose the curve you want to apply.</option>
+                <option value="1">Square Root Curve</option>
+                <option value="2">Max Score Curve</option>
+                <option value="3">10 Point Bump</option>
+            </select>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-submit">Submit</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
+
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

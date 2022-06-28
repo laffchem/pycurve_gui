@@ -1,0 +1,22 @@
+{% extends 'layout.html' %} {% block title %}Pycurve{% endblock %}{% block content %}
+
+<!-- <!-- <form action="" class="row justify-content-center hours-form" method="POST"> -->
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label class="label" for="curved-dl">
+                Download File
+            </label>
+            <input type="text" class="form-control" id="curved-dl" name="curved-dl"
+                value="{{ curved_file }}">
+        </div>
+        <button type="submit" class="btn btn-submit">Download</button>
+    </div>
+    </form> -->
+    <button type="submit" class="btn btn-submit" href="{{ url_for('views.download', filename= {{ curved_file }}) }}">Download</button>
+        <!-- <button type="submit" class="btn btn-reset">Reset</button> -->
+
+
+
+
+
+        {% endblock %}
