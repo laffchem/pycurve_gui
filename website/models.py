@@ -1,8 +1,11 @@
 import math
 import pandas as pd
 from flask import Blueprint
+import os
+import glob
+from website import ALLOWED_EXTENSIONS
 
-curves = Blueprint('curves', __name__)
+models = Blueprint('models', __name__)
 # Square root curve
 
 def square_curve(orig, new_grades):
@@ -41,3 +44,30 @@ def ten_point(orig, new_grades):
         curved_grade = round(grade + 10, 2)
         new_grades.append(curved_grade)
     return new_grades
+
+def delete_downloads(DOWN_PATH):
+    try:
+        cwd = os.getcwd()
+        extension = "csv"
+        os.chdir(DOWN_PATH)
+        result = glob.glob('*.{}'.format(extension))
+        for file in result:
+            os.remove(file)
+        os.chdir(cwd)
+        return "success"
+    except FileNotFoundError as error:
+        return "error"
+
+def delete_uploads(UP_PATH):
+    try:
+        cwd = os.getcwd()
+        extension = "csv"
+        os.chdir(UP_PATH)
+        result = glob.glob('*.{}'.format(extension))
+        for file in result:
+            os.remove(file)
+        os.chdir(cwd)
+        return "success"
+    except FileNotFoundError:
+        return "error"
+

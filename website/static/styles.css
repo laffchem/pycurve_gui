@@ -35,7 +35,6 @@ h5  {
     color: #E7E7DE;
 }
 
-
 .modal-body {
     background-color: #E7E7DE;
 }
@@ -47,6 +46,10 @@ h5  {
 .btn-secondary {
     background-color:#FFD124;
     color: #000;
+}
+
+.bold-p {
+    font-weight: bold;
 }
 
 
@@ -89,3 +92,24 @@ h5  {
     margin-bottom: 1%;
     font-weight: bold;
 }
+
+/* Download page */
+.btn-download {
+    background-color: #008891;
+    color: #E7E7DE;
+    margin: 4% 0 2% 0;
+    font-size: 1.5rem;
+    height: 141px; 
+
+
+}
+
+.btn-home {
+    background-color: #FFD124;
+    margin: 2% 0 2% 0;
+    font-size: 1.5rem;
+    height: 141px;
+    
+
+}
+

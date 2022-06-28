@@ -5,21 +5,38 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="instructionModalLabel">Instructions</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>Choose the csv file you wish to use from your computer.</p>
-                <p>Ensure you know the column name for the grades you want curved and type it in exactly as it is in the file.</p>
+                <p class="bold-p">Open the csv and verify the following information or the program will not operate correctly.</p>
                 <ul>
-                <li>Option 1 -> The square root curve will take the square root of each score and\
-                multiply it by 10.</li>
-                <li>Option 2 -> The max score curve will see which grade range the top score\
-                falls in between and subtract the max score from the upper number.
-                This modifier will be added to all grades.</li>
-                <li>Option 3 -> This will just add 10 points to all the scores</li>
-                <p>
-
-            </ul>
+                    <li>
+                        The column name that is to be curved. (SUPER IMPORTANT!)
+                    </li>
+                    <li>
+                        The grades are in values of percent. If they are points, this won't curve correctly.
+                    </li>
+                    <li>
+                        The file is in csv format. If it is not, the program won't allow you to upload it.
+                    </li>
+                    <li>
+                        All fields are filled out before hitting submit. If not,
+                        you will have to refill the form and upload the file.
+                    </li>
+                </ul>
+                <p>If you are unsure of how to make your file a csv, click the link below.</p>
+                <a href="https://www.youtube.com/watch?v=_c37nEV65Os">How to create a csv!</a>
+                <p class="bold-p">These are the curve options.</p>
+                <ul>
+                    <li>Option 1 -> The square root curve will take the square root of each score and
+                        multiply it by 10.</li>
+                    <li>Option 2 -> The max score curve will see which grade range the top score
+                        falls in between and subtract the max score from the upper number.
+                        This modifier will be added to all grades.</li>
+                    <li>Option 3 -> This will just add 10 points to all the scores</li>
+                </ul>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -29,13 +46,13 @@
 </div>
 
 </div>
-<form action="" class="row justify-content-center hours-form" method="POST" enctype = "multipart/form-data">
+<form action="" class="row justify-content-center hours-form" method="POST" enctype="multipart/form-data">
     <div class="col-lg-6">
         <div class="form-group">
             <label class="label" for="csv-form">
                 Select the csv file.
             </label>
-            <input class="form-control" type="file" id="formFile" name="file">
+            <input class="form-control" type="file" id="formFile" name="file" accept=".csv">
         </div>
         <div class="form-group">
             <label class="label" for="curved-col">

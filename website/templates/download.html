@@ -1,22 +1,38 @@
 {% extends 'layout.html' %} {% block title %}Pycurve{% endblock %}{% block content %}
-
-<!-- <!-- <form action="" class="row justify-content-center hours-form" method="POST"> -->
-    <div class="col-lg-6">
-        <div class="form-group">
-            <label class="label" for="curved-dl">
-                Download File
-            </label>
-            <input type="text" class="form-control" id="curved-dl" name="curved-dl"
-                value="{{ curved_file }}">
+<div class="modal fade" id="instructionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="instructionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="instructionModalLabel">Download Instructions</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Your grades have been curved and you can now download the csv file.
+                    ***Note, ensure that you download your file before curving another test***
+                </p>
+                <p>
+                    If you want to curve another test, ensure you have downloaded your file first.
+                    All curved tests are erased from the program's downloads folder to save space and keep identities
+                    safe.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-submit">Download</button>
     </div>
-    </form> -->
-    <button type="submit" class="btn btn-submit" href="{{ url_for('views.download', filename= {{ curved_file }}) }}">Download</button>
-        <!-- <button type="submit" class="btn btn-reset">Reset</button> -->
+</div>
+<div class="vstack gap-2 col-md-5 mx-auto">
+    <button onclick="location.href='../static/downloads/{{ curved_file }}'" type="button"
+        class="btn btn-download justify-content-center" download="{{ curved_file }}">Download</button>
+    <button onclick="location.href=`{{ url_for('views.home')}}`" type="button"
+        class="btn btn-home justify-content-center">Curve
+        Another
+        Test</button>
+</div>
 
 
-
-
-
-        {% endblock %}
+{% endblock %}
