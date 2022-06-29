@@ -11,8 +11,10 @@ def create_app():
     app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
     if PROJ_STATUS == "dev":
         app.config['SECRET_KEY'] ="secret"
+        app.debug = True
     else:
-        app.config['SECRET_KEY'] = os.getenv('APP_SECRET')
+        app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+        app.debug = False
 
     from .views import views
     from .models import models
