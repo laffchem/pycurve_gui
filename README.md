@@ -12,7 +12,7 @@ making a webapp and figured it could help people.
 
 ___
 
-!(/images/home.png)
+![Home Page!](/images/home.png "Home Page")
 
 Currently, csv is the only input and output filetype. You can open this with
 google sheets, excel, or libreoffice to see the column name to type in.
@@ -37,7 +37,7 @@ to every other score. (This is least generous but the one I use the most)
 
 ___
 
-!(/images/home.png)
+![Downloads!](/images/home.png "Downloads")
 
 This is pretty self explanatory. Download will allow you to download the file 
 you specified on the home page. Curve another test will take you to the home page.
