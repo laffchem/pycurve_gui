@@ -9,7 +9,7 @@ def create_app():
     app.config['UPLOAD_FOLDER'] = "uploads"
     app.config['MAX_CONTENT_LENGTH'] = 5 * 1000 * 1000
     app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
-    app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+    app.config['SECRET_KEY'] = os.environ.get('APP_SECRET')
     if PROJ_STATUS == "dev":
         app.config['SECRET_KEY'] ="secret"
         app.debug = True
