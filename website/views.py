@@ -1,7 +1,6 @@
-from flask import Blueprint, Response, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect
 from werkzeug.utils import secure_filename
 import pandas as pd
-import math
 from .models import delete_uploads, square_curve, modifier, max_curve, ten_point, delete_downloads, delete_uploads
 
 import os

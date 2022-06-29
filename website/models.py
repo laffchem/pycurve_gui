@@ -1,9 +1,7 @@
 import math
-import pandas as pd
 from flask import Blueprint
 import os
 import glob
-from website import ALLOWED_EXTENSIONS
 
 models = Blueprint('models', __name__)
 # Square root curve

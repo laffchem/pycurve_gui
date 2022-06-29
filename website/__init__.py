@@ -1,6 +1,6 @@
 from flask import Flask
 import os
-PROJ_STATUS = "dev"
+PROJ_STATUS = "prod"
 ALLOWED_EXTENSIONS = {'csv'}
 
 def create_app():
