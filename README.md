@@ -37,7 +37,7 @@ to every other score. (This is least generous but the one I use the most)
 
 ___
 
-![Downloads!](/images/home.png "Downloads")
+![Downloads!](/images/download.png "Downloads")
 
 This is pretty self explanatory. Download will allow you to download the file 
 you specified on the home page. Curve another test will take you to the home page.
